@@ -55,36 +55,37 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        appBar: null,
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: null,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(
+            horizontal: 200.0), // Add horizontal padding
+        child: Column(
+          crossAxisAlignment:
+              CrossAxisAlignment.start, // Align items to the start (left)
+          mainAxisAlignment:
+              MainAxisAlignment.center, // Center content vertically
+          children: <Widget>[
             const Text(
-              'Header', // Add your header text here
+              'trade', // Add your header text here
               style: TextStyle(
-                fontSize: 120, // Set a custom size larger than displayLarge
-                fontWeight: FontWeight.bold, // Make it bold for emphasis
-                color: Colors.black, // Optional: Customize color
+                fontFamily: 'Grifter',
+                fontSize: 160, // Set a custom size larger than displayLarge
               ),
-              textAlign: TextAlign.center, // Center the text
             ),
             const SizedBox(height: 10), // Space between header and subheader
             Text(
-              'Subheader', // Add your subheader text here
+              'with confidence', // Add your subheader text here
               style: Theme.of(context).textTheme.titleMedium,
             ),
             const SizedBox(height: 10), // Space between subheader and subtext
             Text(
-              'Subtext', // Add your subtext here
+              'Join the software revolutionizing the way you learn and grow your stock trading skills.', // Add your subtext here
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: Colors.grey,
                   ),
-              textAlign: TextAlign.center,
             ),
           ],
         ),
